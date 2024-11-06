@@ -1,0 +1,27 @@
+[package]
+name = "num_parser2"
+version = "0.1.0"
+description = "A math interpreter and evaluator (fork of num_parser)"
+keywords = ["math", "parser", "evaluator", "complex", "analysis"]
+categories = ["mathematics", "parsing"]
+edition = "2021"
+repository = "https://github.com/0xJWLabs/num_parser2.git"
+homepage = "https://github.com/0xJWLabs/num_parser2"
+documentation = "https://docs.rs/num_parser2"
+readme = "README.md"
+license = "MIT"
+authors = ["0xJWLabs"]
+
+[lib]
+name = "num_parser2"
+"path" = "src/lib.rs"
+
+[features]
+serde_support = ["serde"]
+
+[dependencies]
+serde = { version = "1.0.214", features = ["derive"], optional = true }
+num = { version = "0.4.3", features = ["serde"] }
+itertools = "0.13.0"
+tuple-conv = "1.0.1"
+rand = "0.8.5"
